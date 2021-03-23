@@ -1,0 +1,1 @@
+web: gunicorn martfury.wsgi --log-file -
