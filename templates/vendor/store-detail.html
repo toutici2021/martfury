@@ -1,0 +1,486 @@
+{% extends 'base/storelist.html' %}
+{% load static %}
+
+
+    
+    {% block content %}
+        
+    <div class="ps-page--single ps-page--vendor">
+        <section class="ps-store-list">
+            <div class="container">
+                <aside class="ps-block--store-banner">
+                    <div class="ps-block__content bg--cover" data-background="{% static 'img/vendor/store/default_banner.jpg' %}">
+                        <h3>Go Pro</h3><a class="ps-block__inquiry" href="#"><i class="fa fa-question"></i> Inquiry</a>
+                    </div>
+                    <div class="ps-block__user">
+                        <div class="ps-block__user-avatar"><img src="{% static 'img/vendor/store/user/5.jpg' %}" alt="">
+                            <select class="ps-rating" data-read-only="true">
+                                <option value="1">1</option>
+                                <option value="1">2</option>
+                                <option value="1">3</option>
+                                <option value="1">4</option>
+                                <option value="2">5</option>
+                            </select>
+                        </div>
+                        <div class="ps-block__user-content">
+                            <p><i class="icon-map-marker"></i> 326 Orchard Str, Riau, Riau Indonesia</p>
+                            <p><i class="icon-envelope"></i> gopro@gmail.com</p>
+                        </div>
+                    </div>
+                </aside>
+                <div class="ps-section__wrapper">
+                    <div class="ps-section__left">
+                        <aside class="widget widget--vendor">
+                            <h3 class="widget-title">Product Search</h3>
+                            <div class="form-group--icon">
+                                <input class="form-control" type="text" placeholder="Search..."><i class="icon-magnifier"></i>
+                            </div>
+                        </aside>
+                        <aside class="widget widget--vendor">
+                            <h3 class="widget-title">Store Categories</h3>
+                            <ul class="ps-list--arrow">
+                                <li><a href="#">Interior</a></li>
+                                <li><a href="#">Lighting</a></li>
+                                <li class="menu-item-has-children"><a href="#">Exterior</a>
+                                    <ul class="sub-menu ps-list--arrow">
+                                        <li><a href="#"> Custom Grilles</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Wheels & Tires</a>
+                                    <ul class="sub-menu ps-list--categories">
+                                        <li><a href="#"> Custom Grilles</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Factory Wheels</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="widget widget--vendor widget--open-time">
+                            <h3 class="widget-title"><i class="icon-clock3"></i> Store Hours</h3>
+                            <ul>
+                                <li><strong>Monday:</strong><span>8:00 am - 6:00 pm</span></li>
+                                <li><strong>Monday:</strong><span>8:00 am - 6:00 pm</span></li>
+                                <li><strong>Monday:</strong><span>8:00 am - 6:00 pm</span></li>
+                                <li><strong>Monday:</strong><span>8:00 am - 6:00 pm</span></li>
+                                <li><strong>Monday:</strong><span>8:00 am - 6:00 pm</span></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="ps-section__right">
+                        <nav class="ps-store-link">
+                            <ul>
+                                <li class="active"><a href="{% url 'storedetail' %}">Products</a></li>
+                                <li><a href="{% url 'storedetailinfo' %}">About</a></li>
+                                <li><a href="{% url 'storedetail' %}">Policies</a></li>
+                                <li><a href="{% url 'storedetail' %}">Reviews(0)</a></li>
+                            </ul>
+                        </nav>
+                        <div class="ps-shopping ps-tab-root">
+                            <div class="ps-shopping__header">
+                                <p><strong> 6</strong> Products found</p>
+                                <div class="ps-shopping__actions">
+                                    <div class="ps-shopping__view">
+                                        <p>View</p>
+                                        <ul class="ps-tab-list">
+                                            <li class="active"><a href="#tab-1"><i class="icon-grid"></i></a></li>
+                                            <li><a href="#tab-2"><i class="icon-list4"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ps-tabs">
+                                <div class="ps-tab active" id="tab-1">
+                                    <div class="ps-shopping-product">
+                                        <div class="row">
+                                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                                <div class="ps-product">
+                                                    <div class="ps-product__thumbnail"><a href="{% url 'productdefault' %}"><img src="{% static 'img/products/home-2/recommend/1.jpg' %}" alt="" /></a>
+                                                        <ul class="ps-product__actions">
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                                                            <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#"></a>
+                                                        <div class="ps-product__content"><a class="ps-product__title" href="{% url 'productdefault' %}">Anderson Composites – Custom Hood</a>
+                                                            <div class="ps-product__rating">
+                                                                <select class="ps-rating" data-read-only="true">
+                                                                    <option value="1">1</option>
+                                                                    <option value="1">2</option>
+                                                                    <option value="1">3</option>
+                                                                    <option value="1">4</option>
+                                                                    <option value="2">5</option>
+                                                                </select><span>02</span>
+                                                            </div>
+                                                            <p class="ps-product__price sale">$990.99 <del>$1050.50 </del></p>
+                                                        </div>
+                                                        <div class="ps-product__content hover"><a class="ps-product__title" href="{% url 'productdefault' %}">Anderson Composites – Custom Hood</a>
+                                                            <p class="ps-product__price sale">$990.99 <del>$1050.50 </del></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                                <div class="ps-product">
+                                                    <div class="ps-product__thumbnail"><a href="{% url 'productdefault' %}"><img src="{% static 'img/products/home-2/recommend/2.jpg' %}" alt="" /></a>
+                                                        <ul class="ps-product__actions">
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                                                            <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#">ROBERT’S STORE</a>
+                                                        <div class="ps-product__content"><a class="ps-product__title" href="{% url 'productdefault' %}">Evolution Sport Drilled and Slotted Brake Kit</a>
+                                                            <div class="ps-product__rating">
+                                                                <select class="ps-rating" data-read-only="true">
+                                                                    <option value="1">1</option>
+                                                                    <option value="1">2</option>
+                                                                    <option value="1">3</option>
+                                                                    <option value="1">4</option>
+                                                                    <option value="2">5</option>
+                                                                </select><span></span>
+                                                            </div>
+                                                            <p class="ps-product__price sale">$45.99 <del>$50.50 </del></p>
+                                                        </div>
+                                                        <div class="ps-product__content hover"><a class="ps-product__title" href="{% url 'productdefault' %}">Evolution Sport Drilled and Slotted Brake Kit</a>
+                                                            <p class="ps-product__price sale">$45.99 <del>$50.50 </del></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                                <div class="ps-product">
+                                                    <div class="ps-product__thumbnail"><a href="{% url 'productdefault' %}"><img src="{% static 'img/products/home-2/recommend/3.jpg' %}" alt="" /></a>
+                                                        <ul class="ps-product__actions">
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                                                            <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#">Young Shop</a>
+                                                        <div class="ps-product__content"><a class="ps-product__title" href="{% url 'productdefault' %}">Depo Black Housing Tail Lights Frs Brz 86</a>
+                                                            <div class="ps-product__rating">
+                                                                <select class="ps-rating" data-read-only="true">
+                                                                    <option value="1">1</option>
+                                                                    <option value="1">2</option>
+                                                                    <option value="1">3</option>
+                                                                    <option value="1">4</option>
+                                                                    <option value="2">5</option>
+                                                                </select><span></span>
+                                                            </div>
+                                                            <p class="ps-product__price sale">$100.99 <del>$120.50 </del></p>
+                                                        </div>
+                                                        <div class="ps-product__content hover"><a class="ps-product__title" href="{% url 'productdefault' %}">Depo Black Housing Tail Lights Frs Brz 86</a>
+                                                            <p class="ps-product__price sale">$100.99 <del>$120.50 </del></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                                <div class="ps-product">
+                                                    <div class="ps-product__thumbnail"><a href="{% url 'productdefault' %}"><img src="{% static 'img/products/home-2/recommend/4.jpg' %}" alt="" /></a>
+                                                        <ul class="ps-product__actions">
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                                                            <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
+                                                        <div class="ps-product__content"><a class="ps-product__title" href="{% url 'productdefault' %}">Anderson Composites – Custom Hood</a>
+                                                            <div class="ps-product__rating">
+                                                                <select class="ps-rating" data-read-only="true">
+                                                                    <option value="1">1</option>
+                                                                    <option value="1">2</option>
+                                                                    <option value="1">3</option>
+                                                                    <option value="1">4</option>
+                                                                    <option value="2">5</option>
+                                                                </select><span>01</span>
+                                                            </div>
+                                                            <p class="ps-product__price">$442.99 - $560.00</p>
+                                                        </div>
+                                                        <div class="ps-product__content hover"><a class="ps-product__title" href="{% url 'productdefault' %}">Anderson Composites – Custom Hood</a>
+                                                            <p class="ps-product__price">$442.99 - $560.00</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                                <div class="ps-product">
+                                                    <div class="ps-product__thumbnail"><a href="{% url 'productdefault' %}"><img src="{% static 'img/products/home-2/recommend/5.jpg' %}" alt="" /></a>
+                                                        <ul class="ps-product__actions">
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                                                            <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#">Go Pro</a>
+                                                        <div class="ps-product__content"><a class="ps-product__title" href="{% url 'productdefault' %}">Simpson Polymer White Racing Helmet</a>
+                                                            <div class="ps-product__rating">
+                                                                <select class="ps-rating" data-read-only="true">
+                                                                    <option value="1">1</option>
+                                                                    <option value="1">2</option>
+                                                                    <option value="1">3</option>
+                                                                    <option value="1">4</option>
+                                                                    <option value="2">5</option>
+                                                                </select><span>01</span>
+                                                            </div>
+                                                            <p class="ps-product__price sale">$625.99 <del>$770.50 </del></p>
+                                                        </div>
+                                                        <div class="ps-product__content hover"><a class="ps-product__title" href="{% url 'productdefault' %}">Simpson Polymer White Racing Helmet</a>
+                                                            <p class="ps-product__price sale">$625.99 <del>$770.50 </del></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 ">
+                                                <div class="ps-product">
+                                                    <div class="ps-product__thumbnail"><a href="{% url 'productdefault' %}"><img src="{% static 'img/products/home-2/recommend/6.jpg' %}" alt="" /></a>
+                                                        <div class="ps-product__badge hot">hot</div>
+                                                        <ul class="ps-product__actions">
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon-bag2"></i></a></li>
+                                                            <li><a href="#" data-placement="top" title="Quick View" data-toggle="modal" data-target="#product-quickview"><i class="icon-eye"></i></a></li>
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add to Whishlist"><i class="icon-heart"></i></a></li>
+                                                            <li><a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="icon-chart-bars"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="ps-product__container"><a class="ps-product__vendor" href="#">Global Office</a>
+                                                        <div class="ps-product__content"><a class="ps-product__title" href="{% url 'productdefault' %}">Gibson – Double Skull Exhaust System</a>
+                                                            <div class="ps-product__rating">
+                                                                <select class="ps-rating" data-read-only="true">
+                                                                    <option value="1">1</option>
+                                                                    <option value="1">2</option>
+                                                                    <option value="1">3</option>
+                                                                    <option value="1">4</option>
+                                                                    <option value="2">5</option>
+                                                                </select><span>01</span>
+                                                            </div>
+                                                            <p class="ps-product__price">$1055.99</p>
+                                                        </div>
+                                                        <div class="ps-product__content hover"><a class="ps-product__title" href="{% url 'productdefault' %}">Gibson – Double Skull Exhaust System</a>
+                                                            <p class="ps-product__price">$1055.99</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ps-pagination">
+                                        <ul class="pagination">
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">Next Page<i class="icon-chevron-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="ps-tab" id="tab-2">
+                                    <div class="ps-shopping-product">
+                                        <div class="ps-product ps-product--wide">
+                                            <div class="ps-product__thumbnail"><a href="{% url 'productdefault' %}"><img src="{% static 'img/products/home-2/recommend/1.jpg' %}" alt="" /></a>
+                                            </div>
+                                            <div class="ps-product__container">
+                                                <div class="ps-product__content"><a class="ps-product__title" href="{% url 'productdefault' %}">Anderson Composites – Custom Hood</a>
+                                                    <div class="ps-product__rating">
+                                                        <select class="ps-rating" data-read-only="true">
+                                                            <option value="1">1</option>
+                                                            <option value="1">2</option>
+                                                            <option value="1">3</option>
+                                                            <option value="1">4</option>
+                                                            <option value="2">5</option>
+                                                        </select><span>02</span>
+                                                    </div>
+                                                    <p class="ps-product__vendor">Sold by:<a href="#"></a></p>
+                                                    <ul class="ps-product__desc">
+                                                        <li> Unrestrained and portable active stereo speaker</li>
+                                                        <li> Free from the confines of wires and chords</li>
+                                                        <li> 20 hours of portable capabilities</li>
+                                                        <li> Double-ended Coil Cord with 3.5mm Stereo Plugs Included</li>
+                                                        <li> 3/4″ Dome Tweeters: 2X and 4″ Woofer: 1X</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="ps-product__shopping">
+                                                    <p class="ps-product__price sale">$990.99 <del>$1050.50 </del></p><a class="ps-btn" href="#">Add to cart</a>
+                                                    <ul class="ps-product__actions">
+                                                        <li><a href="#"><i class="icon-heart"></i> Wishlist</a></li>
+                                                        <li><a href="#"><i class="icon-chart-bars"></i> Compare</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ps-product ps-product--wide">
+                                            <div class="ps-product__thumbnail"><a href="{% url 'productdefault' %}"><img src="{% static 'img/products/home-2/recommend/2.jpg' %}" alt="" /></a>
+                                            </div>
+                                            <div class="ps-product__container">
+                                                <div class="ps-product__content"><a class="ps-product__title" href="{% url 'productdefault' %}">Evolution Sport Drilled and Slotted Brake Kit</a>
+                                                    <div class="ps-product__rating">
+                                                        <select class="ps-rating" data-read-only="true">
+                                                            <option value="1">1</option>
+                                                            <option value="1">2</option>
+                                                            <option value="1">3</option>
+                                                            <option value="1">4</option>
+                                                            <option value="2">5</option>
+                                                        </select><span></span>
+                                                    </div>
+                                                    <p class="ps-product__vendor">Sold by:<a href="#">ROBERT’S STORE</a></p>
+                                                    <ul class="ps-product__desc">
+                                                        <li> Unrestrained and portable active stereo speaker</li>
+                                                        <li> Free from the confines of wires and chords</li>
+                                                        <li> 20 hours of portable capabilities</li>
+                                                        <li> Double-ended Coil Cord with 3.5mm Stereo Plugs Included</li>
+                                                        <li> 3/4″ Dome Tweeters: 2X and 4″ Woofer: 1X</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="ps-product__shopping">
+                                                    <p class="ps-product__price sale">$45.99 <del>$50.50 </del></p><a class="ps-btn" href="#">Add to cart</a>
+                                                    <ul class="ps-product__actions">
+                                                        <li><a href="#"><i class="icon-heart"></i> Wishlist</a></li>
+                                                        <li><a href="#"><i class="icon-chart-bars"></i> Compare</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ps-product ps-product--wide">
+                                            <div class="ps-product__thumbnail"><a href="{% url 'productdefault' %}"><img src="{% static 'img/products/home-2/recommend/3.jpg' %}" alt="" /></a>
+                                            </div>
+                                            <div class="ps-product__container">
+                                                <div class="ps-product__content"><a class="ps-product__title" href="{% url 'productdefault' %}">Depo Black Housing Tail Lights Frs Brz 86</a>
+                                                    <div class="ps-product__rating">
+                                                        <select class="ps-rating" data-read-only="true">
+                                                            <option value="1">1</option>
+                                                            <option value="1">2</option>
+                                                            <option value="1">3</option>
+                                                            <option value="1">4</option>
+                                                            <option value="2">5</option>
+                                                        </select><span></span>
+                                                    </div>
+                                                    <p class="ps-product__vendor">Sold by:<a href="#">Young Shop</a></p>
+                                                    <ul class="ps-product__desc">
+                                                        <li> Unrestrained and portable active stereo speaker</li>
+                                                        <li> Free from the confines of wires and chords</li>
+                                                        <li> 20 hours of portable capabilities</li>
+                                                        <li> Double-ended Coil Cord with 3.5mm Stereo Plugs Included</li>
+                                                        <li> 3/4″ Dome Tweeters: 2X and 4″ Woofer: 1X</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="ps-product__shopping">
+                                                    <p class="ps-product__price sale">$100.99 <del>$120.50 </del></p><a class="ps-btn" href="#">Add to cart</a>
+                                                    <ul class="ps-product__actions">
+                                                        <li><a href="#"><i class="icon-heart"></i> Wishlist</a></li>
+                                                        <li><a href="#"><i class="icon-chart-bars"></i> Compare</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ps-product ps-product--wide">
+                                            <div class="ps-product__thumbnail"><a href="{% url 'productdefault' %}"><img src="{% static 'img/products/home-2/recommend/4.jpg' %}" alt="" /></a>
+                                            </div>
+                                            <div class="ps-product__container">
+                                                <div class="ps-product__content"><a class="ps-product__title" href="{% url 'productdefault' %}">Anderson Composites – Custom Hood</a>
+                                                    <div class="ps-product__rating">
+                                                        <select class="ps-rating" data-read-only="true">
+                                                            <option value="1">1</option>
+                                                            <option value="1">2</option>
+                                                            <option value="1">3</option>
+                                                            <option value="1">4</option>
+                                                            <option value="2">5</option>
+                                                        </select><span>01</span>
+                                                    </div>
+                                                    <p class="ps-product__vendor">Sold by:<a href="#">Go Pro</a></p>
+                                                    <ul class="ps-product__desc">
+                                                        <li> Unrestrained and portable active stereo speaker</li>
+                                                        <li> Free from the confines of wires and chords</li>
+                                                        <li> 20 hours of portable capabilities</li>
+                                                        <li> Double-ended Coil Cord with 3.5mm Stereo Plugs Included</li>
+                                                        <li> 3/4″ Dome Tweeters: 2X and 4″ Woofer: 1X</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="ps-product__shopping">
+                                                    <p class="ps-product__price">$442.99 - $560.00</p><a class="ps-btn" href="#">Add to cart</a>
+                                                    <ul class="ps-product__actions">
+                                                        <li><a href="#"><i class="icon-heart"></i> Wishlist</a></li>
+                                                        <li><a href="#"><i class="icon-chart-bars"></i> Compare</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ps-product ps-product--wide">
+                                            <div class="ps-product__thumbnail"><a href="{% url 'productdefault' %}"><img src="{% static 'img/products/home-2/recommend/5.jpg' %}" alt="" /></a>
+                                            </div>
+                                            <div class="ps-product__container">
+                                                <div class="ps-product__content"><a class="ps-product__title" href="{% url 'productdefault' %}">Simpson Polymer White Racing Helmet</a>
+                                                    <div class="ps-product__rating">
+                                                        <select class="ps-rating" data-read-only="true">
+                                                            <option value="1">1</option>
+                                                            <option value="1">2</option>
+                                                            <option value="1">3</option>
+                                                            <option value="1">4</option>
+                                                            <option value="2">5</option>
+                                                        </select><span>01</span>
+                                                    </div>
+                                                    <p class="ps-product__vendor">Sold by:<a href="#">Go Pro</a></p>
+                                                    <ul class="ps-product__desc">
+                                                        <li> Unrestrained and portable active stereo speaker</li>
+                                                        <li> Free from the confines of wires and chords</li>
+                                                        <li> 20 hours of portable capabilities</li>
+                                                        <li> Double-ended Coil Cord with 3.5mm Stereo Plugs Included</li>
+                                                        <li> 3/4″ Dome Tweeters: 2X and 4″ Woofer: 1X</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="ps-product__shopping">
+                                                    <p class="ps-product__price sale">$625.99 <del>$770.50 </del></p><a class="ps-btn" href="#">Add to cart</a>
+                                                    <ul class="ps-product__actions">
+                                                        <li><a href="#"><i class="icon-heart"></i> Wishlist</a></li>
+                                                        <li><a href="#"><i class="icon-chart-bars"></i> Compare</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ps-product ps-product--wide">
+                                            <div class="ps-product__thumbnail"><a href="{% url 'productdefault' %}"><img src="{% static 'img/products/home-2/recommend/6.jpg' %}" alt="" /></a>
+                                            </div>
+                                            <div class="ps-product__container">
+                                                <div class="ps-product__content"><a class="ps-product__title" href="{% url 'productdefault' %}">Gibson – Double Skull Exhaust System</a>
+                                                    <div class="ps-product__rating">
+                                                        <select class="ps-rating" data-read-only="true">
+                                                            <option value="1">1</option>
+                                                            <option value="1">2</option>
+                                                            <option value="1">3</option>
+                                                            <option value="1">4</option>
+                                                            <option value="2">5</option>
+                                                        </select><span>01</span>
+                                                    </div>
+                                                    <p class="ps-product__vendor">Sold by:<a href="#">Global Office</a></p>
+                                                    <ul class="ps-product__desc">
+                                                        <li> Unrestrained and portable active stereo speaker</li>
+                                                        <li> Free from the confines of wires and chords</li>
+                                                        <li> 20 hours of portable capabilities</li>
+                                                        <li> Double-ended Coil Cord with 3.5mm Stereo Plugs Included</li>
+                                                        <li> 3/4″ Dome Tweeters: 2X and 4″ Woofer: 1X</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="ps-product__shopping">
+                                                    <p class="ps-product__price">$1055.99</p><a class="ps-btn" href="#">Add to cart</a>
+                                                    <ul class="ps-product__actions">
+                                                        <li><a href="#"><i class="icon-heart"></i> Wishlist</a></li>
+                                                        <li><a href="#"><i class="icon-chart-bars"></i> Compare</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+        
+    {% endblock content %}
+        
